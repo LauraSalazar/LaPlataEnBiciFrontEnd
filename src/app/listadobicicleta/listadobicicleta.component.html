@@ -1,4 +1,4 @@
-	<div class="container">
+		<div class="container">
 		<div class="header">
 			<h1 class="header-heading">Bicicletas</h1>
 		</div>
@@ -35,62 +35,26 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Id</th>
 						<th>Ubicacion</th>
 						<th>Estado Actual</th>
-
-
+						<th>Numero Cuadro</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody *ngFor="let bicicleta of this.bicicletas">
 					<tr>
-						<th scope="row">1</th>
-						<td>26</td>
-						<td>Plaza Moreno</td>
-						<td>Apta para el uso</td>
-						<td><a href="historialDisponibilidad.html">historial
-								disponibilidad</a></td>
-						<td><a href="#">eliminar</a></td>
-						<td><a href="modificarBicicleta.html">modificar</a></td>
+						<td>{{bicicleta.id}}</td>
+						<td>{{bicicleta.ubicacionActual}}</td>
+						<td>
+					        	<select>
+	                			<option *ngFor="let x of estados" [value]="x.id" [selected]="bicicleta.estado == x.id">{{x.name}}
+	                			</option>
+	            				</select>
+	            		</td>		
+	            		<td>{{bicicleta.numeroCuadro}}</td>				
+	            		<td><a href="#">eliminar</a></td>
+						<td><a href="modificarEstacion.html">modificar</a></td>
 					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>53</td>
-						<td>Plaza Italia</td>
-						<td>En reparacion</td>
-						<td><a href="#">historial disponibilidad</a></td>
-						<td><a href="#">eliminar</a></td>
-						<td><a href="#">modificar</a></td>
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>86</td>
-						<td>Terminal</td>
-						<td>En desuso</td>
-						<td><a href="#">historial disponibilidad</a></td>
-						<td><a href="#">eliminar</a></td>
-						<td><a href="#">modificar</a></td>
-					</tr>
-					<tr>
-						<th scope="row">4</th>
-						<td>90</td>
-						<td>Pasaje Dardo Rocha</td>
-						<td>Denunciada</td>
-						<td><a href="#">historial disponibilidad</a></td>
-						<td><a href="#">eliminar</a></td>
-						<td><a href="#">modificar</a></td>
-					</tr>
-					<tr>
-						<th scope="row">5</th>
-						<td>98</td>
-						<td>Plaza Moreno</td>
-						<td>Apta para el uso</td>
-						<td><a href="#">historial disponibilidad</a></td>
-						<td><a href="#">eliminar</a></td>
-						<td><a href="#">modificar</a></td>
-					</tr>
-				</tbody>
-			</table>
+				</tbody>			</table>
 			<br>
 			<table class="table table-striped">
 				<tbody>

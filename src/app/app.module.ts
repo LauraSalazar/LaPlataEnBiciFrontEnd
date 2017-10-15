@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ListadousuariosComponent } from './listadousuarios/listadousuarios.component';
 import { LoggerService } from './logger.service';
 import { UsuariomockserviceService } from './usuariomockservice.service';
+import { BicicletaserviceService } from './bicicletaservice.service';
 import { UsuarioserviceService } from './usuarioservice.service';
 import { ListadobicicletaComponent } from './listadobicicleta/listadobicicleta.component';
 import { AgregarestacionComponent } from './agregarestacion/agregarestacion.component';
@@ -22,6 +23,7 @@ import { UsuariocreadoComponent } from './usuariocreado/usuariocreado.component'
 import { Router } from '@angular/router';
 import { EstacioncreadaComponent } from './estacioncreada/estacioncreada.component';
 import { EstacionserviceService } from './estacionservice.service';
+import { BicicletaagregadaComponent } from './bicicletaagregada/bicicletaagregada.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { EstacionserviceService } from './estacionservice.service';
     UsuariocreadoComponent,
     AgregarestacionComponent,
     EstacioncreadaComponent,
+    ListadobicicletaComponent,
+    BicicletaagregadaComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +56,7 @@ import { EstacionserviceService } from './estacionservice.service';
     UsuariomockserviceService,
     UsuarioserviceService,
     EstacionserviceService,
+    BicicletaserviceService,
     ],
   bootstrap: [AppComponent]
 })

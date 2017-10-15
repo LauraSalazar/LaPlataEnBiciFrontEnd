@@ -28,6 +28,7 @@ export class EstacionserviceService {
 
 
   getEstaciones(): Observable<Estacion[]> {
+      console.log('Entro en getEstaciones');
         return this.http.get(this.urlEstaciones)
             .map((response: Response) => <Estacion[]>response.json())
             .catch(this.handleError);

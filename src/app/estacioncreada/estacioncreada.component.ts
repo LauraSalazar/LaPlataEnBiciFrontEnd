@@ -10,6 +10,7 @@ import { Estado } from '../Estado';
   styleUrls: ['./estacioncreada.component.css']
 })
 export class EstacioncreadaComponent implements OnInit {
+
 estacion:  Estacion = new Estacion(0, ' ', ' ', ' ',
        ' ', ' ', ' ', ' ', 0);
  public estados: Estado[] = [] ;    
@@ -36,7 +37,7 @@ estacion:  Estacion = new Estacion(0, ' ', ' ', ' ',
 
         this.estados.push(new Estado('1', 'Operativa'));
         this.estados.push(new Estado('2', 'Cerrada'));
-        this.estados.push(new Estado('1', 'En construccion'));
+        this.estados.push(new Estado('3', 'En construccion'));
   }
 
 }

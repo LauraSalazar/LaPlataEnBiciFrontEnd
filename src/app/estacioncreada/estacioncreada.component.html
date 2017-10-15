@@ -25,12 +25,14 @@
 						<th>Longitud</th>
 						<th>{{this.estacion.longitud}}</th>
 					</tr>
+					<tr>
 						    <th>Estado</th>					
 					        <th>
 					        	<select>
 	                			<option *ngFor="let x of estados" [value]="x.id" [selected]="this.estacion.estado == x.id">{{x.name}}</option>
 	            				</select>
 	            			</th>
+					</tr>
 					<tr>
 						<th>Abierto Desde</th>
 						<th>{{this.estacion.abiertodesde}}</th>
